@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Medok Checker",
+  "version": "1.1",
+  "homepage_url": "https://github.com/oneralon/medok-insurance-checker#readme",
+  "icons": {
+    "150": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://medok.ruswizards.com/Default.aspx?personId=*",
+        "*://medok.ruswizards.com/Schedule/Default.aspx?patientId=*"
+      ],
+      "js": ["jquery.js", "insurance.js"]
+    }
+  ],
+  "applications": {
+    "gecko": {
+      "id": "medok@insurance.check",
+      "strict_min_version": "45.0"
+    }
+  },
+  "permissions": [
+    "*://rostov-tfoms.ru/*",
+    "webRequest"
+  ]
+}
