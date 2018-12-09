@@ -22,7 +22,7 @@
     }
   },
   "permissions": [
-    "*://rostov-tfoms.ru/*",
+    "*://*/*",
     "webRequest"
   ]
 }
